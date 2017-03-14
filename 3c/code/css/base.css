@@ -1,0 +1,115 @@
+/*Copyright:成都零点信息技术有限公司 QQ:863230477*/
+html,body,iframe,h1,h2,h3,h4,h5,h6,p,a,em,img,strong,var,dl,dt,dd,ol,ul,li,form,label{border:none;outline:none;margin:0;padding:0;font-style:normal;vertical-align:baseline;background:transparent;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+html{height:100%;overflow:auto;-webkit-overflow-scrolling:touch;position:relative}
+body{width:100%;margin:0 auto;height:100%;min-height:100%;font-size:14px;line-height:30px;color:#333333;background:#E9E9E9;word-wrap:break-word;font-family:arial,SimSun,'宋体','Microsoft YaHei','微软雅黑',Helvetica;position:relative}
+ul{list-style:none}
+input[type=button],button{outline:none}
+table{border-collapse:collapse;empty-cells:show}
+img{vertical-align:middle}
+a:link,a:visited{text-decoration:none;cursor:pointer}
+.u,a.u,a:hover{text-decoration:underline}
+.nou,a.nou{text-decoration:none}
+.lineu,.lineu:hover{text-decoration:line-through}
+.bgf{background-color:#FFFFFF}
+.clo0,a.clo0{color:#000}
+.clo3,a.clo3{color:#333}
+.clo6,a.clo6{color:#666}
+.clo9,a.clo9{color:#999}
+.cloc,a.cloc{color:#ccc}
+.clof,a.clof,a:visited.clof{color:#FFF}
+.red,a.red{color:#E22}
+.dred,a.dred{color:#900}
+.green,a.green{color:#090}
+.blue,a.blue{color:#39C}
+.yellow,a.yellow{color:#f90}
+.orange,a.orange{color:#f60}
+.purple,a.purple{color:#691BA3}
+.font12{font-size:12px}
+.font13{font-size:13px}
+.font14{font-size:14px}
+.font15{font-size:15px}
+.font16{font-size:16px}
+.font18{font-size:18px}
+.font20{font-size:20px}
+.font24{font-size:24px}
+.fontb{font-weight:bold}
+.fontn{font-weight:normal}
+.fontyahei{font-family:"Microsoft Yahei",微软雅黑}
+.left{float:left}
+.right{float:right}
+.center{text-align:center}
+.middle{vertical-align:middle}
+.tright{text-align:right}
+.ovh{overflow:hidden}
+.ova{overflow:auto}
+.ove{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.hide{display:none}
+.pointer,button,input[type=button],input[type=submit]{cursor:pointer}
+.mlr3{margin:0 3px}
+.mlr5{margin:0 5px}
+.ml5{margin-left:5px}
+.ml10{margin-left:10px}
+.mr10{margin-right:10px}
+.mt10{margin-top:10px}
+.mb10{margin-bottom:10px}
+.mb20{margin-bottom:20px}
+.ml35{margin-left:35px}
+.ml60{margin-left:59px}
+.plr10{padding:0 10px}
+.cmlr3 a,.cmlr3 input,.cmlr3 button{margin:0 3px}
+.wth40{width:40px}
+.wth80{width:80px}
+.wth200{width:200px}
+.wth300{width:300px}
+.ablock{display:block;width:100%;height:100%}
+.iblock{display:inline-block;*display:inline;*zoom:1}
+.relative{position:relative}
+.absolute{position:absolute}
+.clear{clear:both}
+
+.active_t:active{position:relative;top:1px}
+
+/*工单反馈*/
+#pop_iframe{position:fixed;z-index:101;left:auto;right:10px;width:30%;min-width:320px;min-height:300px;top:38px;height:90vh;border-radius:5px;overflow:hidden;background:#FFFFFF;line-height:30px}
+.pop_arrow{position:fixed;z-index:101;top:30px;left:700px;width:0;height:0;border-bottom:10px solid #FFFFFF;border-left:10px solid transparent;border-right:10px solid transparent}
+
+/*旋转180度*/
+.deg180{-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);}
+.deg90{-moz-transform:rotate(90deg);-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);-o-transform:rotate(90deg);}
+/*禁止选中*/
+.noselect{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;user-select:none}
+/*弹性布局核心css*/
+.hboxpage{display:-webkit-box;display:-moz-box;display:box;position:relative;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;box-orient:horizontal}
+.vboxpage{display:-webkit-box;display:-moz-box;display:box;position:relative;-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical}
+.flex{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
+
+/*弹出可拖拽的功能型遮罩层*/
+.maskWrap{position:fixed;z-index:997;top:0;left:0;width:100%;background:#000;filter:alpha(opacity=00);-moz-opacity:0.00;opacity:0.00}
+.homepop{position:absolute;z-index:998;min-height:150px;border:3px double #999;background:#fff;display:none}
+.move{padding-left:10px;background:#C5C5C5;cursor:move;text-align:left;font-size:14px;color:#009797;font-weight:bold}
+.move a{float:right;color:#000;text-decoration:underline;padding-right:5px;cursor:pointer}
+.inside{padding:10px;}
+
+
+/*遮罩弹出框*/
+.fullbg{position:fixed;z-index:100;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.8)}
+.fulltop{position:fixed;z-index:101;left:0;right:0;top:0;padding:20px 10px 20px;background:#FFFFFF;overflow:auto;-webkit-overflow-scrolling:touch;box-sizing:border-box}
+.fullpop{position:fixed;z-index:101;left:5%;right:5%;top:10%;min-height:200px;max-height:80%;padding:10px;overflow:auto;-webkit-overflow-scrolling:touch;border:1px solid #666;border-radius:5px;background:#FFF;box-sizing:border-box}
+.fullpop input,.fullpop select,.fullpop button{font-size:14px;padding:2px 2px;vertical-align:middle}
+
+.pop{position:fixed;z-index:101;left:5%;right:5%;top:50px;padding:10px;border:1px solid #666;border-radius:5px;background:#FFF;box-sizing:border-box}
+
+/*自动消失的提示框*/
+#clearpop{position:fixed;left:10%;right:10%;bottom:70px;z-index:999;text-align:center}
+#clearpop p{display:inline-block;min-width:100px;max-width:90%;padding:10px 20px;font-size:16px;font-weight:bold;line-height:22px;border-radius:5px;background:#333;color:#FFFFFF;opacity:0.9}
+@media screen and (max-height:600px){
+    #clearpop{bottom:50px}
+    #clearpop p{padding:6px 12px;font-size:15px;font-weight:normal;border-radius:3px}
+}
+
+
+/*加载中..*/
+#loader{position:fixed;left:50%;top:200px;margin-left:-36px;width:32px;height:32px;padding:10px 20px;border-radius:10px;background:#fff url(../img/loading.gif) 20px 10px no-repeat;opacity:0.9}
+#toploading{width:100%;height:80px;background:#e5e5e5 url(../img/loading.gif) center 25px no-repeat}
+#fulloader{position:fixed;z-index:101;left:0;top:0;width:100%;height:100%;background: #000 url(../img/loading00.gif) center no-repeat;background-size: 12%;opacity:0.8}
+
