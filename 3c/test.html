@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+var obj = {
+    'title':{38:'微信支付',78:'qq支付',88:'支付宝支付'},
+    'monut':{
+        '2014-04-07':[1,0,0,0,0,0,0],
+        '2014-04-08':[0,0,0,0,0,0,0],
+        '2014-04-09':[0,0,0,0,0,0,0],
+        '2014-04-10':[0,0,0,0,0,0,0],
+        '2014-04-11':[0,0,0,0,0,0,0],
+        '2014-04-12':[0,0,0,75,0,0,0],
+        '2014-04-13':[0,0,0,0,25.5,0,0],
+        '2014-04-14':[0,0,0,85,0,0,0],
+        '2014-04-15':[0,0,0,0,0,0,99]
+    },
+    'ownMonut':{
+        '2014-04-07':{38:1,78:0,88:0},
+        '2014-04-08':{38:2,78:0,88:0},
+        '2014-04-09':{38:0,78:0,88:3},
+        '2014-04-10':{38:4,78:0,88:0},
+        '2014-04-11':{38:5,78:0,88:0},
+        '2014-04-12':{38:0,78:6,88:0},
+        '2014-04-13':{38:7,78:0,88:0},
+        '2014-04-14':{38:0,78:8,88:0},
+        '2014-04-15':{38:0,78:9,88:0}
+    }
+}
+
+
+parseParam(obj);
+
+/*解析后台参数*/
+function parseParam(param){
+    var list = [],
+        endList = [];
+    for(var z in param){
+        var p = {};
+        // 解析出自定义的title字段
+        if(z === 'title'){
+            p.type = 'title';
+            p.value = parseObj(param[z]);
+        } else if(z === 'monut'){ // 解析出固定字段的值
+            p.type = 'monut';
+            p.value = parseMonuts(param[z]);
+        } else if(z === 'ownMonut'){ // 解析出自定义字段的值
+             p.type = 'ownMonut';
+             p.value = parseOwnMonuts(param[z]);
+        }
+        list.push(p);
+    }
+    //做最后的拼接,将固定字段的值和自定义字段的值数组拼接起来
+    var endArr = [];
+    for(var g = 0; g < list[1].value.length; g ++){
+    	for(var w = 0; w < list[2].value.length; w ++){
+    		if(w == g){
+    			endArr.push(list[1].value[g].concat(list[2].value[w]));
+    			break;
+    		}
+        }
+    }
+    endList[0] = list[0];
+    endList[1] = {type:'tr',value:endArr};
+     console.log(endList);
+}
+
+/*解析参数中的纯对象*/
+function parseObj(obj){
+    var objArr = [];
+    for(var i in obj){
+        objArr.push(obj[i]);
+    }
+    return objArr;
+}
+
+/*解析参数中的固定字段*/
+function parseMonuts(obj){
+    var monut = [],
+        monutArr = [];
+    for(var j in obj){
+        monut = parseObj(obj[j]);
+        var  monutObj = [];
+        for(var k = 0;k < monut.length;k ++){
+            monutObj.push(monut[k])
+        }
+         monutArr.push(monutObj);
+    }
+    return monutArr;
+}
+
+/*解析参数中的自定义字段*/
+function parseOwnMonuts(obj){
+    var ownArr= [];
+    for(var h in obj){
+        ownArr.push(parseObj(obj[h]));
+    }
+    return ownArr;
+}
+</script>
